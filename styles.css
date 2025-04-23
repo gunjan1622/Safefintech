@@ -88,15 +88,30 @@ body {
   color: #ffde59;
 }
 
-.register-btn {
+.register-ind {
   background-color: #4d0099;
   color: white;
-  padding: 20px 60px; /* Increased from 10px 25px */
+  padding: 15px 30px; /* Increased from 10px 25px */
   border: none;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
-  font-size: 20px; /* Increased from 14px */
+  font-size: 14=6px; /* Increased from 14px */
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.register-sch {
+  background-color: #4d0099;
+  color: white;
+  padding: 15px 30px; /* Increased from 10px 25px */
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px; /* Increased from 14px */
   text-transform: uppercase;
   transition: background-color 0.3s;
   display: inline-block;
