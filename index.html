@@ -1,286 +1,762 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>National Finance Literacy Quiz 2025</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>National Finance Literacy Quiz 2025</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#1e40af',secondary:'#3b82f6'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+scroll-behavior: smooth;
+}
+.hero-gradient {
+background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+}
+.timeline-connector {
+position: absolute;
+top: 24px;
+left: 24px;
+bottom: -24px;
+width: 2px;
+background-color: #e5e7eb;
+z-index: 0;
+}
+.timeline-item:last-child .timeline-connector {
+display: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.custom-checkbox {
+position: relative;
+display: inline-block;
+width: 20px;
+height: 20px;
+margin-right: 8px;
+border: 2px solid #1e40af;
+border-radius: 4px;
+cursor: pointer;
+}
+.custom-checkbox.checked::after {
+content: "";
+position: absolute;
+top: 2px;
+left: 6px;
+width: 6px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.custom-checkbox.checked {
+background-color: #1e40af;
+}
+.custom-switch {
+position: relative;
+display: inline-block;
+width: 48px;
+height: 24px;
+}
+.custom-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #e5e7eb;
+transition: .4s;
+border-radius: 24px;
+}
+.slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .slider {
+background-color: #1e40af;
+}
+input:checked + .slider:before {
+transform: translateX(24px);
+}
+.custom-radio {
+position: relative;
+display: inline-block;
+width: 20px;
+height: 20px;
+margin-right: 8px;
+border: 2px solid #1e40af;
+border-radius: 50%;
+cursor: pointer;
+}
+.custom-radio.checked::after {
+content: "";
+position: absolute;
+top: 4px;
+left: 4px;
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background-color: #1e40af;
+}
+</style>
 </head>
-<body>
-    <header class="header" id="top">
-        <nav class="navbar">
-            <img src="logo.jpg" alt="NFLQ Logo" class="logo">
-            <ul class="nav-links">
-                <li><a href="#hero">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#advisory">ADVISORY</a></li>
-                <li><a href="#eligibility">ELIGIBILITY</a></li>
-                <li><a href="#structure">STRUCTURE</a></li>
-                <li><a href="#syllabus">SYLLABUS</a></li>
-                <li><a href="#awards">AWARDS</a></li>
-                <li><a href="#dates">DATES</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero" id="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>NATIONAL FINANCE </h1>
-                <h1>LITERACY QUIZ 2025 </h1>
-                <p>Empower. Educate. Excel.</p>
-                <a href="#" class="register-ind">REGISTER as an Individual</a><br><br>
-                <a href="#" class="register-sch">REGISTER as a School/College</a>
-            </div>
-        </div>
-        <img src="1.png" alt="Students with books" class="hero-image">
-    </section>
-
-    <!-- Modified About section with About Us content integrated -->
-    <section class="about-section" id="about">
-        <div class="about-container">
-            <div class="about-content">
-                <h2 class="section-title">ABOUT NFLQ</h2>
-                <div class="about-text">
-                    <p>The Financial Literacy Olympiad 2025 is a national-level competition hosted by Sodhani Academy of Fintech Enablers Limited to promote financial awareness and empower students to combat cyber fraud, scams, and money mismanagement.</p>
-                    <br>
-                    <p>Students will explore the world of budgeting, investing, saving, insurance, and entrepreneurship — all while competing in a fun and rewarding environment.</p>
-                </div>
-                
-                <h2 class="section-title why-title">WHY PARTICIPATE</h2>
-                <ul class="benefits-list">
-                    <li>Develop essential money management skills</li>
-                    <li>Boost decision-making and financial awareness</li>
-                    <li>Learn to protect yourself from cyber frauds and scams</li>
-                    <li>Win exciting prizes and recognition</li>
-                    <li>Receive a Certificate of Participation & Excellence</li>
-                    <li>Get 50% scholarship on a selected course from SAFE Academy (Scholarship up to ₹1 Crore)</li>
-                </ul>
-            </div>
-            
-            <div class="side-image-container">
-                <img src="about.png" alt="Finance education illustration" class="side-image">
-            </div>
-        </div>
-    </section>
-
-    <section class="nationwide-impact" id="impact">
-        <div class="impact-container">
-            <h2 class="impact-title">With over <span class="highlight">500 schools</span> on board, we are fostering financial literacy among students nationwide through the National Finance Olympiad</h2>
-            
-            <div class="impact-visual">
-                <img src="finance-book.png" alt="Financial education illustration" class="impact-image">
-            </div>
-        </div>
-    </section>
-        
-        <!-- New About Us benefits table integrated in the same section -->
-    <section class="about-section" id="about">
-        <div class="benefits-table-container">
-            <h2 class="section-title">ABOUT US</h2>
-            <div class="benefits-table">
-                <div class="image-column">
-                    <div class="gallery-images">
-                        <img src="aboutus-book.png" alt="Students participating" class="gallery-img main-img">
-                    </div>
-                </div>
-                
-                <div class="benefits-column">
-                    <div class="benefit-row">
-                        <div class="benefit-number">01</div>
-                        <div class="benefit-content">
-                            <h4>Who We Are</h4>
-                            <p> India’s only BSE-listed training company transforming dreams into financial reality.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="benefit-row">
-                        <div class="benefit-number">02</div>
-                        <div class="benefit-content">
-                            <h4>Our Legacy</h4>
-                            <p>Backed by 32 years of market experience and 50,000+ investor interactions.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="benefit-row">
-                        <div class="benefit-number">03</div>
-                        <div class="benefit-content">
-                            <h4>What We Do</h4>
-                            <p>Empowering learners with financial literacy, training, and consultancy services.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Advisory Committee Section -->
-    <section class="section" id="advisory">
-        <h2 class="section-title">OUR ADVISORY COMMITTEE</h2>
-        <div class="advisors-container">
-            <div class="advisor-card">
-                <div class="advisor-image-container">
-                    <img src="person1.jpg" alt="Person 1" class="advisor-image">
-                </div>
-                <h3 class="advisor-name">Person 1</h3>
-                <p class="advisor-title">Cofounder</p>
-                <div class="advisor-quote">
-                    <p>"Lorem ipsam"</p>
-                </div>
-            </div>
-            
-            <div class="advisor-card">
-                <div class="advisor-image-container">
-                    <img src="person2.jpg" alt="Person 2" class="advisor-image">
-                </div>
-                <h3 class="advisor-name">SPerson 2</h3>
-                <p class="advisor-title">Ex-CBO</p>
-                <div class="advisor-quote">
-                    <p>"Lorem ipsam"</p>
-                </div>
-            </div>
-            
-            <div class="advisor-card">
-                <div class="advisor-image-container">
-                    <img src="person3.jpg" alt="Person 3" class="advisor-image">
-                </div>
-                <h3 class="advisor-name">Person 3</h3>
-                <p class="advisor-title">Finance </p>
-                <div class="advisor-quote">
-                    <p>"Lorem ipsam"</p>
-                </div>
-            </div>
-        </div>
-        
-    </section>
-
-    <section class="section" id="eligibility">
-        <h2 class="section-title">WHO CAN PARTICIPATE</h2>
-        <div class="category-boxes">
-            <div class="category-box">
-                <div class="category-title">CATEGORY 1</div>
-                <p>Students of Class 6 to 8</p>
-            </div>
-            <div class="category-box">
-                <div class="category-title">CATEGORY 2</div>
-                <p>Students of Class 9 to 10</p>
-            </div>
-            <div class="category-box">
-                <div class="category-title">CATEGORY 3</div>
-                <p>Students of Class 11 to 12</p>
-            </div>
-            <div class="category-box">
-                <div class="category-title">CATEGORY 4</div>
-                <p>College & University students</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="structure">
-        <h2 class="section-title">COMPETITION STRUCTURE</h2>
-        <div class="structure-content">
-            <div class="structure-item">
-                <img src="Picture1.png" alt="Quiz Icon" class="structure-icon">
-                <h3>Online Quiz on Financial Fundamentals</h3>
-            </div>
-            <div class="structure-item">
-                <img src="Picture2.png" alt="Evaluation Icon" class="structure-icon">
-                <h3>Separate evaluation for each category</h3>
-            </div>
-            <div class="structure-item">
-                <img src="Picture3.png" alt="Questions Icon" class="structure-icon">
-                <h3>Questions tailored by experts to assess financial literacy and application</h3>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="syllabus">
-      <h2 class="section-title">TOPICS COVERED</h2>
-      <div class="topics-container">
-          <div class="image-container">
-              <img src="2.png" alt="Kids studying" class="topics-image">
-          </div>
-          
-          <ul class="topics-list">
-              <li>Budgeting & Saving</li>
-              <li>Credit & Debt Management</li>
-              <li>Investments & Stock Market</li>
-              <li>Banking & Financial Institutions</li>
-              <li>Insurance & Risk Management</li>
-              <li>Entrepreneurship & Financial Planning</li>
-              <li>Taxation Basics</li>
-              <li>Ethics in Finance</li>
-          </ul>
-      </div>
-    </section>
-
-    <section class="section" id="awards">
-      <h2 class="section-title">AWARDS</h2>
-      <div class="awards-container">
-          <ul class="awards-list">
-              <li>Prizes worth ₹21 Lakhs</li>
-              <li>50% scholarship for all registered students or their parents on selected online SAFE Academy courses</li>
-              <li>Trophies, certificates, and public recognition</li>
-              <li>Internship opportunities & more</li>
-          </ul>
-          <div class="trophy-container">
-              <img src="Trophy.png" alt="Trophy" class="trophy-image">
-          </div>
-      </div>
-    </section>
-
-    <section class="section" id="dates">
-        <h2 class="section-title">IMPORTANT DATES</h2>
-        <div class="dates-content">
-            <div class="dates-text">
-                <p>Registrations Open: April 10, 2025</p>
-                <p>Limited seats. Register early!</p>
-            </div>
-            <a href="#" class="register-ind">REGISTER as an Individual</a>
-            <a href="#" class="register-sch">REGISTER as a School/College</a>
-        </div>
-    </section>
-
-    <footer class="footer" id="contact">
-        <div class="contact-info">
-            <div class="contact-left">
-                <div class="contact-item">Phone: +91 9057090999</div>
-                <div class="contact-item">Website: www.safefintech.in</div>
-                <div class="contact-item">Email: info@safefintech.in</div>
-            </div>
-            <div class="contact-right">
-                <div class="contact-item">Instagram: @sodhanifintech</div>
-                <div class="contact-item">LinkedIn: Sodhani Academy of Fintech Enablers</div>
-            </div>
-        </div>
-        <img src="logo.jpg" alt="SafeFintech Logo" class="footer-logo">
-        <div class="footer-nav">
-            <a href="#hero">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="#advisory">ADVISORY</a>
-            <a href="#eligibility">ELIGIBILITY</a>
-            <a href="#structure">STRUCTURE</a>
-            <a href="#syllabus">SYLLABUS</a>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80, // Offset for the fixed header
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+<body class="bg-gray-50">
+<!-- Header -->
+<header class="fixed w-full bg-white bg-opacity-95 shadow-sm z-50">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<a href="#" class="text-2xl font-['Pacifico'] text-primary">NFLQ</a>
+<nav class="hidden md:flex space-x-8">
+<a href="#about" class="text-gray-700 hover:text-primary font-medium">About</a>
+<a href="#why-participate" class="text-gray-700 hover:text-primary font-medium">Why Participate</a>
+<a href="#eligibility" class="text-gray-700 hover:text-primary font-medium">Eligibility</a>
+<a href="#structure" class="text-gray-700 hover:text-primary font-medium">Structure</a>
+<a href="#dates" class="text-gray-700 hover:text-primary font-medium">Important Dates</a>
+<a href="#committee" class="text-gray-700 hover:text-primary font-medium">Committee</a>
+</nav>
+<button class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-all whitespace-nowrap">Register Now</button>
+<div class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line ri-lg"></i>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative pt-24 overflow-hidden" style="background-image: url('https://readdy.ai/api/search-image?query=A%20professional%20finance%20education%20scene%20with%20abstract%20financial%20symbols%2C%20charts%2C%20and%20graphs%20on%20the%20right%20side%2C%20with%20a%20clean%20gradient%20blue%20background%20on%20the%20left%20for%20text%20placement.%20The%20transition%20between%20text%20area%20and%20image%20should%20be%20seamless%20and%20natural%2C%20creating%20a%20modern%20professional%20look%20for%20a%20finance%20quiz%20website&width=1920&height=800&seq=1&orientation=landscape'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40"></div>
+<div class="container mx-auto px-4 py-20 md:py-32 relative z-10">
+<div class="max-w-3xl">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">National Finance Literacy Quiz 2025</h1>
+<p class="text-xl text-white/90 mb-8">Empowering the next generation with essential financial knowledge and skills through India's premier finance literacy competition.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-white text-primary px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">Register as Individual</button>
+<button class="bg-secondary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">Register as School</button>
+</div>
+<div class="mt-8 flex items-center">
+<div class="flex -space-x-2">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20Indian%20woman%20with%20a%20friendly%20smile%20against%20a%20neutral%20background&width=100&height=100&seq=2&orientation=squarish" class="w-10 h-10 rounded-full border-2 border-white" alt="Participant">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20Indian%20man%20with%20glasses%20against%20a%20neutral%20background&width=100&height=100&seq=3&orientation=squarish" class="w-10 h-10 rounded-full border-2 border-white" alt="Participant">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20teenage%20Indian%20student%20with%20a%20confident%20expression%20against%20a%20neutral%20background&width=100&height=100&seq=4&orientation=squarish" class="w-10 h-10 rounded-full border-2 border-white" alt="Participant">
+</div>
+<span class="text-white ml-4">Join 10,000+ participants nationwide</span>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" fill="#f9fafb">
+<path d="M0,96L80,80C160,64,320,32,480,32C640,32,800,64,960,69.3C1120,75,1280,53,1360,42.7L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+</svg>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About NFLQ</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">The National Finance Literacy Quiz is India's premier platform for students to demonstrate their financial knowledge and win recognition.</p>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/2">
+<img src="https://static.readdy.ai/image/7ed9e19e53c2c64612499c169d4addbd/f42f1e388fb31a05031d3a29d91690a3.png" alt="About NFLQ" class="rounded-lg shadow-lg w-full">
+</div>
+<div class="md:w-1/2">
+<h3 class="text-2xl font-semibold text-gray-900 mb-6">About NFLQ 2025</h3>
+<p class="text-gray-700 mb-6">NFLQ 2025 is a national-level competition organized by the Sodhian Academy of Fintech Enablers Limited. Its mission is to educate and empower students with essential financial skills, helping them navigate the world of money management, cyber frauds, scams, and financial planning. The competition is designed to be both educational and enjoyable, offering students a practical and engaging experience with real-life money concepts.</p>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-shield-check-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Comprehensive Learning</h4>
+<p class="text-gray-600">From money management to cyber fraud prevention</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-book-open-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Comprehensive Learning</h4>
+<p class="text-gray-600">Covers essential financial concepts from banking to investments and taxation.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-team-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Inclusive Participation</h4>
+<p class="text-gray-600">Open to students from Class 6 to college level across all educational boards.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Participate Section -->
+<section id="why-participate" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Participate</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Participating in NFLQ helps students enhance their money management skills, improve financial decision-making, and gain awareness about cyber safety.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mb-6">
+<i class="ri-money-dollar-box-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Money Management Skills</h3>
+<p class="text-gray-600">Enhance your financial literacy and develop practical money management skills for life-long benefit.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mb-6">
+<i class="ri-shield-keyhole-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Cyber Safety Awareness</h3>
+<p class="text-gray-600">Learn essential cyber security practices to protect yourself in the digital financial world.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mb-6">
+<i class="ri-graduation-cap-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">SAFE Academy Scholarship</h3>
+<p class="text-gray-600">Earn up to 50% scholarship on SAFE Academy courses to further your financial education.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mb-6">
+<i class="ri-award-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">National Recognition</h3>
+<p class="text-gray-600">Showcase your talent on a national platform and gain prestigious recognition for your financial literacy.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mb-6">
+<i class="ri-gamepad-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Fun Learning Experience</h3>
+<p class="text-gray-600">Enjoy learning about finance through an engaging and interactive quiz format.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mb-6">
+<i class="ri-file-list-3-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Certification</h3>
+<p class="text-gray-600">Receive certificates of participation and achievement to enhance your academic portfolio.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Awards Section -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Awards & Recognition</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">NFLQ offers prizes worth ₹21 lakhs and 50% scholarships for all registered students or their parents on selected online SAFE Academy courses. Participants also receive certificates, trophies, public recognition, and potential internship opportunities, making the competition a valuable experience beyond just winning.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+<div class="w-16 h-16 flex items-center justify-center bg-[#C9B037]/10 rounded-full mx-auto mb-6">
+<i class="ri-money-dollar-circle-line text-[#C9B037] ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Cash Prizes</h3>
+<p class="text-gray-600">Total prize pool worth ₹21 lakhs distributed across various categories and rounds</p>
+</div>
+<div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+<div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-6">
+<i class="ri-graduation-cap-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">SAFE Academy Scholarship</h3>
+<p class="text-gray-600">50% scholarship on selected online courses for all registered students and parents</p>
+</div>
+<div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary/10 rounded-full mx-auto mb-6">
+<i class="ri-award-line text-secondary ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Recognition</h3>
+<p class="text-gray-600">Certificates, trophies, and public recognition for outstanding performance</p>
+</div>
+<div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+<div class="w-16 h-16 flex items-center justify-center bg-[#2563eb]/10 rounded-full mx-auto mb-6">
+<i class="ri-briefcase-line text-[#2563eb] ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Career Opportunities</h3>
+<p class="text-gray-600">Potential internship opportunities with leading financial institutions</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<!-- Eligibility Section -->
+<section id="eligibility" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Eligibility Categories</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">The competition is open to students across different age groups and educational levels.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all border-t-4 border-blue-300">
+<div class="w-14 h-14 flex items-center justify-center bg-blue-100 rounded-full mb-6">
+<i class="ri-seedling-line text-blue-500 ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Junior Category</h3>
+<p class="text-gray-700 font-medium mb-2">Classes 6-8</p>
+<p class="text-gray-600 mb-4">For students beginning their journey in financial literacy with age-appropriate concepts.</p>
+<ul class="text-gray-600 space-y-2">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Basic banking concepts</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Introduction to saving</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Money management basics</span>
+</li>
+</ul>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all border-t-4 border-green-300">
+<div class="w-14 h-14 flex items-center justify-center bg-green-100 rounded-full mb-6">
+<i class="ri-plant-line text-green-500 ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Intermediate Category</h3>
+<p class="text-gray-700 font-medium mb-2">Classes 9-10</p>
+<p class="text-gray-600 mb-4">For students ready to explore more complex financial concepts and applications.</p>
+<ul class="text-gray-600 space-y-2">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Banking products and services</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Introduction to investments</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Financial planning basics</span>
+</li>
+</ul>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all border-t-4 border-yellow-300">
+<div class="w-14 h-14 flex items-center justify-center bg-yellow-100 rounded-full mb-6">
+<i class="ri-tree-line text-yellow-500 ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Senior Category</h3>
+<p class="text-gray-700 font-medium mb-2">Classes 11-12</p>
+<p class="text-gray-600 mb-4">For students preparing for higher education with advanced financial knowledge.</p>
+<ul class="text-gray-600 space-y-2">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Investment strategies</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Personal finance management</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Introduction to markets</span>
+</li>
+</ul>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all border-t-4 border-purple-300">
+<div class="w-14 h-14 flex items-center justify-center bg-purple-100 rounded-full mb-6">
+<i class="ri-graduation-cap-line text-purple-500 ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">College Category</h3>
+<p class="text-gray-700 font-medium mb-2">Undergraduate Students</p>
+<p class="text-gray-600 mb-4">For college students seeking comprehensive financial literacy and expertise.</p>
+<ul class="text-gray-600 space-y-2">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Advanced investment analysis</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Taxation and financial planning</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Market dynamics and economics</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Competition Structure -->
+<section id="structure" class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Competition Structure</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">A comprehensive online assessment designed to evaluate financial knowledge across all categories.</p>
+</div>
+<div class="max-w-4xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-gray-50 p-8 rounded-lg relative overflow-hidden">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mb-6">
+<i class="ri-computer-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Online Quiz on Financial Fundamentals</h3>
+<p class="text-gray-600">Comprehensive online assessment platform with adaptive testing technology to ensure fair evaluation.</p>
+</div>
+<div class="bg-gray-50 p-8 rounded-lg relative overflow-hidden">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mb-6">
+<i class="ri-team-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Separate Evaluation</h3>
+<p class="text-gray-600">Category-specific assessment criteria ensuring fair competition across all age groups and education levels.</p>
+</div>
+<div class="bg-gray-50 p-8 rounded-lg relative overflow-hidden">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mb-6">
+<i class="ri-lightbulb-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Expert-Curated Questions</h3>
+<p class="text-gray-600">Questions designed by industry experts to test both theoretical knowledge and practical application of financial concepts.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Topics Section -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Topics Covered</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">The quiz covers a wide range of financial topics tailored to each category level.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-4">
+<i class="ri-money-dollar-circle-line text-primary ri-xl"></i>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">Budgeting & Saving</h3>
+<p class="text-gray-600 text-sm">Essential skills for managing personal finances and building wealth</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-4">
+<i class="ri-bank-card-line text-primary ri-xl"></i>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">Credit & Debt Management</h3>
+<p class="text-gray-600 text-sm">Understanding credit scores, loans, and responsible borrowing</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-4">
+<i class="ri-stock-line text-primary ri-xl"></i>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">Investments & Stock Market</h3>
+<p class="text-gray-600 text-sm">Understanding market dynamics and investment strategies</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-4">
+<i class="ri-bank-line text-primary ri-xl"></i>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">Banking & Financial Institutions</h3>
+<p class="text-gray-600 text-sm">Banking systems, services, and financial products</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-4">
+<i class="ri-shield-check-line text-primary ri-xl"></i>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">Insurance & Risk Management</h3>
+<p class="text-gray-600 text-sm">Protection strategies and risk mitigation techniques</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-4">
+<i class="ri-line-chart-line text-primary ri-xl"></i>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">Entrepreneurship & Financial Planning</h3>
+<p class="text-gray-600 text-sm">Business finance and long-term financial planning</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-4">
+<i class="ri-government-line text-primary ri-xl"></i>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">Taxation Basics</h3>
+<p class="text-gray-600 text-sm">Understanding tax systems and compliance requirements</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-4">
+<i class="ri-hand-heart-line text-primary ri-xl"></i>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">Ethics in Finance</h3>
+<p class="text-gray-600 text-sm">Responsible financial practices and ethical decision-making</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Important Dates -->
+<section id="dates" class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Important Dates</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Mark your calendar for the registration date.</p>
+</div>
+<div class="max-w-4xl mx-auto bg-gray-50 rounded-lg p-8">
+<div class="text-center">
+<div class="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-6">
+<i class="ri-calendar-check-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-2xl font-semibold text-gray-900 mb-2">Registrations Open: April 10, 2025</h3>
+<p class="text-lg text-gray-600">Limited seats. Register early!</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Advisory Committee -->
+<section id="committee" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Advisory Committee</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">The quiz is guided by distinguished experts from academia and the financial industry.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20distinguished%20Indian%20male%20professor%20with%20glasses%20and%20grey%20hair%20against%20a%20neutral%20background&width=150&height=150&seq=6&orientation=squarish" alt="Dr. Rajesh Kumar" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover object-top">
+<h3 class="text-xl font-semibold text-gray-900 mb-1">Dr. Rajesh Kumar</h3>
+<p class="text-primary mb-3">Chairperson, NFLQ</p>
+<p class="text-gray-600 mb-4">Former Executive Director, Reserve Bank of India with over 30 years of experience in financial policy.</p>
+<div class="flex justify-center space-x-3">
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-full">
+<i class="ri-linkedin-fill text-gray-600"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-full">
+<i class="ri-twitter-x-fill text-gray-600"></i>
+</a>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20middle-aged%20Indian%20woman%20with%20a%20confident%20smile%20wearing%20business%20attire%20against%20a%20neutral%20background&width=150&height=150&seq=7&orientation=squarish" alt="Prof. Meera Sharma" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover object-top">
+<h3 class="text-xl font-semibold text-gray-900 mb-1">Prof. Meera Sharma</h3>
+<p class="text-primary mb-3">Academic Director</p>
+<p class="text-gray-600 mb-4">Professor of Finance at IIM Ahmedabad with expertise in financial literacy and behavioral economics.</p>
+<div class="flex justify-center space-x-3">
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-full">
+<i class="ri-linkedin-fill text-gray-600"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-full">
+<i class="ri-twitter-x-fill text-gray-600"></i>
+</a>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20Indian%20male%20executive%20in%20a%20suit%20with%20a%20friendly%20expression%20against%20a%20neutral%20background&width=150&height=150&seq=8&orientation=squarish" alt="Mr. Vikram Mehta" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover object-top">
+<h3 class="text-xl font-semibold text-gray-900 mb-1">Mr. Vikram Mehta</h3>
+<p class="text-primary mb-3">Industry Liaison</p>
+<p class="text-gray-600 mb-4">CEO of a leading investment firm with a passion for promoting financial education among youth.</p>
+<div class="flex justify-center space-x-3">
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-full">
+<i class="ri-linkedin-fill text-gray-600"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-full">
+<i class="ri-twitter-x-fill text-gray-600"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Registration CTA -->
+<section class="py-20 bg-primary">
+<div class="container mx-auto px-4">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Test Your Financial Knowledge?</h2>
+<p class="text-xl text-white/90 mb-8">Join thousands of students across India in the National Finance Literacy Quiz 2025 and showcase your financial acumen.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-white text-primary px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">Register as Individual</button>
+<button class="bg-white/20 text-white border border-white px-8 py-3 !rounded-button font-medium hover:bg-white/30 transition-all whitespace-nowrap">Register as School</button>
+</div>
+<p class="text-white/80 mt-6">Registration deadline: July 31, 2025</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div>
+<h3 class="text-xl font-semibold mb-4">NFLQ 2025</h3>
+<p class="text-gray-400 mb-6">India's premier financial literacy competition for students, promoting essential money management skills for the future.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700">
+<i class="ri-twitter-x-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700">
+<i class="ri-instagram-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700">
+<i class="ri-linkedin-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="#about" class="text-gray-400 hover:text-white">About NFLQ</a></li>
+<li><a href="#eligibility" class="text-gray-400 hover:text-white">Eligibility</a></li>
+<li><a href="#structure" class="text-gray-400 hover:text-white">Competition Structure</a></li>
+<li><a href="#dates" class="text-gray-400 hover:text-white">Important Dates</a></li>
+<li><a href="#committee" class="text-gray-400 hover:text-white">Advisory Committee</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<i class="ri-phone-line mr-3 mt-1"></i>
+<span class="text-gray-400">+91 90570 09999</span>
+</li>
+<li class="flex items-start">
+<i class="ri-global-line mr-3 mt-1"></i>
+<span class="text-gray-400">www.safefintech.in</span>
+</li>
+<li class="flex items-start">
+<i class="ri-mail-line mr-3 mt-1"></i>
+<span class="text-gray-400">info@safefintech.in</span>
+</li>
+<li class="flex items-start">
+<i class="ri-instagram-line mr-3 mt-1"></i>
+<span class="text-gray-400">@sodhisafefintech</span>
+</li>
+<li class="flex items-start">
+<i class="ri-linkedin-line mr-3 mt-1"></i>
+<span class="text-gray-400">Sodhani Academy of Fintech Enablers</span>
+</li>
+</ul>
+<div class="mt-6">
+<h4 class="font-medium mb-3">Subscribe to Updates</h4>
+<div class="flex">
+<input type="email" placeholder="Your email" class="bg-gray-800 border-none text-white px-4 py-2 rounded-l-button w-full focus:outline-none focus:ring-2 focus:ring-primary">
+<button class="bg-primary text-white px-4 py-2 rounded-r-button hover:bg-opacity-90 transition-all whitespace-nowrap">Subscribe</button>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+<p>© 2025 National Finance Literacy Quiz. All rights reserved.</p>
+<div class="flex justify-center space-x-4 mt-4">
+<a href="#" class="hover:text-gray-400">Privacy Policy</a>
+<a href="#" class="hover:text-gray-400">Terms of Service</a>
+<a href="#" class="hover:text-gray-400">Cookie Policy</a>
+</div>
+<div class="flex justify-center space-x-6 mt-6">
+<i class="ri-visa-fill text-2xl text-gray-400"></i>
+<i class="ri-mastercard-fill text-2xl text-gray-400"></i>
+<i class="ri-paypal-fill text-2xl text-gray-400"></i>
+<i class="ri-bank-fill text-2xl text-gray-400"></i>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Mobile menu toggle
+const menuButton = document.querySelector('.ri-menu-line');
+const mobileMenu = document.createElement('div');
+mobileMenu.className = 'fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out';
+mobileMenu.innerHTML = `
+<div class="flex justify-between items-center p-4 border-b">
+<a href="#" class="text-2xl font-['Pacifico'] text-primary">NFLQ</a>
+<button class="w-10 h-10 flex items-center justify-center">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<div class="p-4">
+<nav class="flex flex-col space-y-4">
+<a href="#about" class="text-gray-700 hover:text-primary font-medium py-2 border-b border-gray-100">About</a>
+<a href="#why-participate" class="text-gray-700 hover:text-primary font-medium py-2 border-b border-gray-100">Why Participate</a>
+<a href="#eligibility" class="text-gray-700 hover:text-primary font-medium py-2 border-b border-gray-100">Eligibility</a>
+<a href="#structure" class="text-gray-700 hover:text-primary font-medium py-2 border-b border-gray-100">Structure</a>
+<a href="#dates" class="text-gray-700 hover:text-primary font-medium py-2 border-b border-gray-100">Important Dates</a>
+<a href="#committee" class="text-gray-700 hover:text-primary font-medium py-2 border-b border-gray-100">Committee</a>
+<button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-all mt-4 whitespace-nowrap">Register Now</button>
+</nav>
+</div>
+`;
+document.body.appendChild(mobileMenu);
+menuButton.addEventListener('click', function() {
+mobileMenu.classList.remove('translate-x-full');
+});
+mobileMenu.querySelector('.ri-close-line').parentElement.addEventListener('click', function() {
+mobileMenu.classList.add('translate-x-full');
+});
+// Close mobile menu when clicking on a link
+mobileMenu.querySelectorAll('a').forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('translate-x-full');
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Custom checkbox functionality
+const customCheckboxes = document.querySelectorAll('.custom-checkbox');
+customCheckboxes.forEach(checkbox => {
+checkbox.addEventListener('click', function() {
+this.classList.toggle('checked');
+const input = this.nextElementSibling;
+if (input && input.type === 'checkbox') {
+input.checked = !input.checked;
+}
+});
+});
+// Custom radio functionality
+const customRadios = document.querySelectorAll('.custom-radio');
+customRadios.forEach(radio => {
+radio.addEventListener('click', function() {
+const name = this.dataset.name;
+const radios = document.querySelectorAll(`.custom-radio[data-name="${name}"]`);
+radios.forEach(r => r.classList.remove('checked'));
+this.classList.add('checked');
+const input = this.nextElementSibling;
+if (input && input.type === 'radio') {
+input.checked = true;
+}
+});
+});
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+const headerHeight = document.querySelector('header').offsetHeight;
+const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+window.scrollTo({
+top: targetPosition,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
 </body>
 </html>
