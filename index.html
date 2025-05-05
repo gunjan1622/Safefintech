@@ -20,6 +20,12 @@ scroll-behavior: smooth;
 .hero-gradient {
 background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
 }
+
+.logo {
+  width: 50px;
+  margin-right: 20px;
+}
+
 .timeline-connector {
 position: absolute;
 top: 24px;
@@ -126,7 +132,7 @@ background-color: #1e40af;
 <!-- Header -->
 <header class="fixed w-full bg-white bg-opacity-95 shadow-sm z-50">
 <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-<a href="#" class="text-2xl font-['Pacifico'] text-primary">NFLQ</a>
+<img src="img\logo.jpg" alt="NFLQ Logo" class="logo">
 <nav class="hidden md:flex space-x-8">
 <a href="#about" class="text-gray-700 hover:text-primary font-medium">About</a>
 <a href="#why-participate" class="text-gray-700 hover:text-primary font-medium">Why Participate</a>
@@ -144,7 +150,7 @@ background-color: #1e40af;
 </div>
 </header>
 <!-- Hero Section -->
-<section class="relative pt-24 overflow-hidden" style="background-image: url('https://readdy.ai/api/search-image?query=A%20professional%20finance%20education%20scene%20with%20abstract%20financial%20symbols%2C%20charts%2C%20and%20graphs%20on%20the%20right%20side%2C%20with%20a%20clean%20gradient%20blue%20background%20on%20the%20left%20for%20text%20placement.%20The%20transition%20between%20text%20area%20and%20image%20should%20be%20seamless%20and%20natural%2C%20creating%20a%20modern%20professional%20look%20for%20a%20finance%20quiz%20website&width=1920&height=800&seq=1&orientation=landscape'); background-size: cover; background-position: center;">
+<section class="relative pt-24 overflow-hidden" style="background-image: url('img\bg.jpg'); background-size: cover; background-position: center;">
 <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40"></div>
 <div class="container mx-auto px-4 py-20 md:py-32 relative z-10">
 <div class="max-w-3xl">
@@ -160,9 +166,9 @@ background-color: #1e40af;
 </div>
 <div class="mt-8 flex items-center">
 <div class="flex -space-x-2">
-<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20Indian%20woman%20with%20a%20friendly%20smile%20against%20a%20neutral%20background&width=100&height=100&seq=2&orientation=squarish" class="w-10 h-10 rounded-full border-2 border-white" alt="Participant">
-<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20Indian%20man%20with%20glasses%20against%20a%20neutral%20background&width=100&height=100&seq=3&orientation=squarish" class="w-10 h-10 rounded-full border-2 border-white" alt="Participant">
-<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20teenage%20Indian%20student%20with%20a%20confident%20expression%20against%20a%20neutral%20background&width=100&height=100&seq=4&orientation=squarish" class="w-10 h-10 rounded-full border-2 border-white" alt="Participant">
+<img src="img\person1.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="Participant">
+<img src="img\person2.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="Participant">
+<img src="img\person3.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="Participant">
 </div>
 <span class="text-white ml-4">Join 10,000+ participants nationwide</span>
 </div>
@@ -183,7 +189,7 @@ background-color: #1e40af;
 </div>
 <div class="flex flex-col md:flex-row items-center gap-12">
 <div class="md:w-1/2">
-<img src="https://static.readdy.ai/image/7ed9e19e53c2c64612499c169d4addbd/f42f1e388fb31a05031d3a29d91690a3.png" alt="About NFLQ" class="rounded-lg shadow-lg w-full">
+<img src="img\about.png" alt="About NFLQ" class="rounded-lg shadow-lg w-full">
 </div>
 <div class="md:w-1/2">
 <h3 class="text-2xl font-semibold text-gray-900 mb-6">About NFLQ 2025</h3>
@@ -541,7 +547,7 @@ background-color: #1e40af;
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
-<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20distinguished%20Indian%20male%20professor%20with%20glasses%20and%20grey%20hair%20against%20a%20neutral%20background&width=150&height=150&seq=6&orientation=squarish" alt="Dr. Rajesh Kumar" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover object-top">
+<img src="img\a1.jpg" alt="Dr. Rajesh Kumar" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover object-top">
 <h3 class="text-xl font-semibold text-gray-900 mb-1">Dr. Rajesh Kumar</h3>
 <p class="text-primary mb-3">Chairperson, NFLQ</p>
 <p class="text-gray-600 mb-4">Former Executive Director, Reserve Bank of India with over 30 years of experience in financial policy.</p>
@@ -555,7 +561,7 @@ background-color: #1e40af;
 </div>
 </div>
 <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
-<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20middle-aged%20Indian%20woman%20with%20a%20confident%20smile%20wearing%20business%20attire%20against%20a%20neutral%20background&width=150&height=150&seq=7&orientation=squarish" alt="Prof. Meera Sharma" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover object-top">
+<img src="img\a2.jpg" alt="Prof. Meera Sharma" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover object-top">
 <h3 class="text-xl font-semibold text-gray-900 mb-1">Prof. Meera Sharma</h3>
 <p class="text-primary mb-3">Academic Director</p>
 <p class="text-gray-600 mb-4">Professor of Finance at IIM Ahmedabad with expertise in financial literacy and behavioral economics.</p>
@@ -569,7 +575,7 @@ background-color: #1e40af;
 </div>
 </div>
 <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all text-center">
-<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20Indian%20male%20executive%20in%20a%20suit%20with%20a%20friendly%20expression%20against%20a%20neutral%20background&width=150&height=150&seq=8&orientation=squarish" alt="Mr. Vikram Mehta" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover object-top">
+<img src="img\a3.jpg" alt="Mr. Vikram Mehta" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover object-top">
 <h3 class="text-xl font-semibold text-gray-900 mb-1">Mr. Vikram Mehta</h3>
 <p class="text-primary mb-3">Industry Liaison</p>
 <p class="text-gray-600 mb-4">CEO of a leading investment firm with a passion for promoting financial education among youth.</p>
